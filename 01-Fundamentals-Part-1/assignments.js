@@ -23,7 +23,7 @@ console.log(typeof country);
 
 // Lecture: let, const and var
 
-const language = "Spanish";
+const language = "spanish";
 // language = 'French';
 
 
@@ -67,3 +67,24 @@ console.log('19' - '13' + '17'); // 23. It is 617,  There is no minus between st
 console.log('19' - '13' + 17); // 23
 console.log('123' < 57); // false
 console.log(5 + 6 + '4' + 9 - 4 - 2) // 18. It is 1143
+
+
+// Lecture: Equality Operators: == vs ===
+
+// const numNeighbours = Number(prompt("How many neighbor countries does your country have?"));
+// if (numNeighbours === 1) {
+//     console.log('Only 1 border!')
+// } else if (numNeighbours > 1) {
+//     console.log('More than 1 border')
+// } else {
+//     console.log('No borders')
+// }
+
+
+// Lecture: Logical operators
+
+if ((population < 50) && !isIsland && (language === 'english')) {
+    console.log(`You should live in ${country}`)
+} else {
+    console.log(`${country} does not meet your criteria`)
+}

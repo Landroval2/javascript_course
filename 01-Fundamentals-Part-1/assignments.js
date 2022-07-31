@@ -59,3 +59,11 @@ if (moreThanAverage) {
 } else {
     console.log(`${country}'s population is ${averagePopulation - population} million below average`)
 }
+
+// Lecture: Type Conversion and Coercion
+
+console.log('9' - '5'); // 4
+console.log('19' - '13' + '17'); // 23. It is 617,  There is no minus between strings so it does the operation as if they were nubmers. But then it can add two strings.
+console.log('19' - '13' + 17); // 23
+console.log('123' < 57); // false
+console.log(5 + 6 + '4' + 9 - 4 - 2) // 18. It is 1143

@@ -73,17 +73,72 @@
 
 // console.log(fruitProcessor(2, 3));
 
-const calcAge = function (birthYear) {
-  return 2037 - birthYear;
+// const calcAge = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// const yearsUntilRetirement = function (birthYear, firstName) {
+//   const age = calcAge(birthYear);
+//   const retirement = 65 - age;
+//   if (retirement > 0) {
+//     return retirement;
+//   } else {
+//     return -1;
+//   }
+// };
+// console.log(yearsUntilRetirement(1970, "Jonas"));
+
+// const friends = ["Michael", "John", "Peter"];
+// console.log(friends);
+
+// const years = new Array(1991, 1984, 2020, 2021);
+// console.log(years);
+
+// console.log(friends[0]);
+
+// console.log(friends.length);
+// console.log(friends[friends.length - 1]);
+
+// friends[2] = "Jay";
+// console.log(friends);
+
+// const firstName = "Jonas";
+// const jonas = [firstName, "Schmedtmann", 2037 - 1991, "teacher", friends];
+// console.log(jonas);
+
+const calcAge = function (birthYears) {
+  return 2037 - birthYears;
 };
 
-const yearsUntilRetirement = function (birthYear, firstName) {
-  const age = calcAge(birthYear);
-  const retirement = 65 - age;
-  if (retirement > 0) {
-    return retirement;
-  } else {
-    return -1;
-  }
-};
-console.log(yearsUntilRetirement(1970, "Jonas"));
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const friends = ["Michael", "John", "Peter"];
+
+// Add elements
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("Johnny");
+console.log(friends);
+
+// Remove elements
+friends.pop(); // Removes the last element
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // Removes the first element
+console.log(friends);
+
+console.log(friends.indexOf("John"));
+console.log(friends.indexOf("Steven"));
+
+console.log(friends.includes("Steven"));
+console.log(friends.includes("John"));
+friends.push(23);
+console.log(friends.includes("23")); // Strict comparison
+
+if (friends.includes("Peter")) {
+  console.log("You have a friend called Peter");
+}

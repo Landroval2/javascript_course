@@ -45,7 +45,7 @@ console.log(percentageOfWorld2(populationChina));
 console.log(percentageOfWorld2(populationArgentina));
 console.log(percentageOfWorld2(populationFinland));
 
-// Lecture: Introduction to arrays
+// Lecture: Functions calling other functions
 
 function describePopulation(country, population) {
   return `${country} has ${population} million people, which is ${percentageOfWorld1(
@@ -56,3 +56,31 @@ function describePopulation(country, population) {
 console.log(describePopulation("China", populationChina));
 console.log(describePopulation("Argentina", populationArgentina));
 console.log(describePopulation("Finland", populationFinland));
+
+// Lecture: Introduction to Arrays
+
+const populations = [1441, 45, 6];
+
+console.log(populations.length === 4);
+
+const percentages = [
+  percentageOfWorld1(populations[0]),
+  percentageOfWorld2(populations[1]),
+  percentageOfWorld3(populations[2]),
+];
+
+console.log(percentages);
+
+// Lecture: Basic Array Operations (Methods)
+
+const neighbours = ["Chile", "Brasil", "Uruguay", "Paraguay", "Bolivia"];
+neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop();
+
+if (!neighbours.includes("Germany")) {
+  console.log("Probably not a central European country :D");
+}
+
+neighbours[1] = "Brazil";
+console.log(neighbours);

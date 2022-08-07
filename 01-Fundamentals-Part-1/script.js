@@ -153,26 +153,59 @@
 
 // Logical operators
 
-const  hasDriversLicense = true;
-const hasGoodVision = true;
+// const  hasDriversLicense = true;
+// const hasGoodVision = true;
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
-console.log(!hasGoodVision);
+// console.log(hasDriversLicense && hasGoodVision);
+// console.log(hasDriversLicense || hasGoodVision);
+// console.log(!hasGoodVision);
 
-// if (hasDriversLicense && hasGoodVision) {
-//     console.log('Sarah is able to drive!');
-// } else {
-//     console.log('Someone else should drive');
+// // if (hasDriversLicense && hasGoodVision) {
+// //     console.log('Sarah is able to drive!');
+// // } else {
+// //     console.log('Someone else should drive');
+// // }
+
+// // const isTired = true;
+// // console.log(hasDriversLicense || hasGoodVision || isTired)
+
+
+// // if (hasDriversLicense && hasGoodVision && !isTired) {
+// //     console.log('Sarah is able to drive!');
+// // } else {
+// //     console.log('Someone else should drive');
+// // }
+
+// const day = 'monday';
+
+// switch(day) {
+//     case 'monday': 
+//         console.log('Plan course structure');
+//         console.log('Go to coding meetup');
+//         break;
+//     case 'tuesday':
+//         console.log('Prepare theory videos');
+//         break;
+//     case 'wednesday':
+//     case 'thursday':
+//         console.log('Write code examples');
+//         break;
+//     case 'friday':
+//         console.log('Record videos');
+//         break;
+//     case 'saturday':
+//     case 'sunday':
+//         console.log('Enjoy the weekend');
+//         break;
+//     default:
+//         console.log('Invalid day');
 // }
 
-const isTired = true;
-console.log(hasDriversLicense || hasGoodVision || isTired)
+const age =  17;
+age >= 18 ? console.log('I like to drink wine') :
+console.log('I like to drink water');
 
+const drink = age >= 18 ? 'wine' : 'water';
+console.log(drink)
 
-if (hasDriversLicense && hasGoodVision && !isTired) {
-    console.log('Sarah is able to drive!');
-} else {
-    console.log('Someone else should drive');
-}
-
+console.log(`I like to drink ${age >= 18 ? 'wine' : 'water'}`)

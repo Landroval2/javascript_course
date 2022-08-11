@@ -84,3 +84,43 @@ if (!neighbours.includes("Germany")) {
 
 neighbours[1] = "Brazil";
 console.log(neighbours);
+
+// Lecture: Introduction to Objects
+
+const myCountry = {
+  country: "Argentina",
+  capital: "Buenos Aires",
+  language: "Spanish",
+  population: 45,
+  neighbours: ["Chile", "Bolivia", "Paraguay", "Brazil", "Uruguay"],
+};
+
+// Lecture: Dot vs. Bracket Notation
+
+console.log(
+  `${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.`
+);
+
+myCountry.population = myCountry.population - 2;
+console.log(myCountry.population);
+
+myCountry["population"] = myCountry["population"] + 2;
+
+console.log(myCountry.population);
+
+// Lecture: Object Methods
+
+myCountry.describe = function () {
+  console.log(
+    `${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`
+  );
+};
+
+myCountry.describe();
+
+myCountry.checkIsland = function () {
+  this.isIsland = this.neighbours.length === 0 ? true : false;
+};
+
+myCountry.checkIsland();
+console.log(myCountry.isIsland);

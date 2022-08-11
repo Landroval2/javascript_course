@@ -106,39 +106,105 @@
 // const jonas = [firstName, "Schmedtmann", 2037 - 1991, "teacher", friends];
 // console.log(jonas);
 
-const calcAge = function (birthYears) {
-  return 2037 - birthYears;
+// const calcAge = function (birthYears) {
+//   return 2037 - birthYears;
+// };
+
+// const years = [1990, 1967, 2002, 2010, 2018];
+
+// const friends = ["Michael", "John", "Peter"];
+
+// // Add elements
+// const newLength = friends.push("Jay");
+// console.log(friends);
+// console.log(newLength);
+
+// friends.unshift("Johnny");
+// console.log(friends);
+
+// // Remove elements
+// friends.pop(); // Removes the last element
+// const popped = friends.pop();
+// console.log(popped);
+// console.log(friends);
+
+// friends.shift(); // Removes the first element
+// console.log(friends);
+
+// console.log(friends.indexOf("John"));
+// console.log(friends.indexOf("Steven"));
+
+// console.log(friends.includes("Steven"));
+// console.log(friends.includes("John"));
+// friends.push(23);
+// console.log(friends.includes("23")); // Strict comparison
+
+// if (friends.includes("Peter")) {
+//   console.log("You have a friend called Peter");
+// }
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   age: 2037 - 1991,
+//   job: "Teacher",
+//   friends: ["Michael", "Peter", "Steven"],
+// };
+
+// console.log(jonas);
+
+// console.log(jonas.lastName);
+// console.log(jonas["lastName"]);
+
+// const nameKey = "Name";
+// console.log(jonas["first" + nameKey]);
+// console.log(jonas["last" + nameKey]);
+
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log(
+//     "Wrong request! Choose between firstName, lastName, age, job and friends"
+//   );
+// }
+
+// jonas.location = "Portugal";
+// console.log(jonas);
+
+// console.log(
+//   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is ${jonas.friends[0]}`
+// );
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "Teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2037 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   return 2037 - this.birthYear;
+  calcAge: function () {
+    this.age = 2037 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}years old ${
+      this.job
+    } , and he has ${this.hasDriversLicense ? "a" : "no"} driver's license`;
+  },
 };
 
-const years = [1990, 1967, 2002, 2010, 2018];
+jonas.calcAge();
+console.log(jonas.age);
+console.log(jonas.age);
 
-const friends = ["Michael", "John", "Peter"];
+// Challenge
+// "Jonas is a 46 years old teacher, and he has a driver's license"
 
-// Add elements
-const newLength = friends.push("Jay");
-console.log(friends);
-console.log(newLength);
-
-friends.unshift("Johnny");
-console.log(friends);
-
-// Remove elements
-friends.pop(); // Removes the last element
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
-
-friends.shift(); // Removes the first element
-console.log(friends);
-
-console.log(friends.indexOf("John"));
-console.log(friends.indexOf("Steven"));
-
-console.log(friends.includes("Steven"));
-console.log(friends.includes("John"));
-friends.push(23);
-console.log(friends.includes("23")); // Strict comparison
-
-if (friends.includes("Peter")) {
-  console.log("You have a friend called Peter");
-}
+console.log(jonas.getSummary());
